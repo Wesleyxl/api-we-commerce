@@ -12,6 +12,8 @@
     "ecmaVersion": "latest"
   },
   "rules": {
-    "import/no-unresolved": "off"
+    "import/no-unresolved": "off",
+    "consistent-return": "warn",
+    "camelcase": "off"
   }
 }

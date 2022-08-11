@@ -14,7 +14,7 @@
         "src/app/model/*"
       ],
       "@middleware/*": [
-        "src/middleware/*"
+        "src/app/middleware/*"
       ],
       "@helper/*": [
         "src/helper/*"

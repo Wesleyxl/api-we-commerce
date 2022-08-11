@@ -8,6 +8,9 @@
     "mysql2": "^2.3.3",
     "sequelize": "^6.21.3"
   },
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
   "devDependencies": {
     "eslint": "^7.32.0 || ^8.2.0",
     "eslint-config-airbnb-base": "^15.0.0",
@@ -22,7 +25,7 @@
     "@": "src",
     "@controller": "src/app/controller",
     "@model": "src/app/model",
-    "@middleware": "src/middleware",
+    "@middleware": "src/app/middleware",
     "@helper": "src/helper",
     "@config": "src/config",
     "@database": "src/database",
