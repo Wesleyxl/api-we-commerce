@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "module-alias": "^2.2.2",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.21.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-prettier": "^4.2.1",
+    "nodemon": "^2.0.19",
+    "prettier": "^2.7.1",
+    "sequelize-cli": "^6.4.1"
+  },
+  "_moduleAliases": {
+    "@": "src",
+    "@controller": "src/app/controller",
+    "@model": "src/app/model",
+    "@middleware": "src/middleware",
+    "@helper": "src/helper",
+    "@config": "src/config",
+    "@database": "src/database",
+    "@public": "src/public",
+    "@routes": "src/routes"
+  }
+}
