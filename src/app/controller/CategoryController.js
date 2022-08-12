@@ -59,4 +59,17 @@ module.exports = {
   },
 
   // delete existing category
+  async remove(req, res) {
+    const { id_category } = req.params;
+
+    const category = await Category.findByPk(id_category);
+
+    if (!category) {
+      return res.status(400).json({ error: "Category does not exist" });
+    }
+
+    await Category.destroy({ where: { id: id_category } });
+
+    return res.json({ message: "category successfully removed" });
+  },
 };
