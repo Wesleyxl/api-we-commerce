@@ -51,15 +51,15 @@ module.exports = {
       { where: { id: id_category } }
     );
 
-    if (category) {
-      return res.json(category);
+    if (!category) {
+      return res.status(400).json({ error: "Something went wrong" });
     }
 
-    return res.status(400).json({ error: "Something went wrong" });
+    return res.json({ message: "category successfully edited" });
   },
 
   // delete existing category
-  async remove(req, res) {
+  async delete(req, res) {
     const { id_category } = req.params;
 
     const category = await Category.findByPk(id_category);

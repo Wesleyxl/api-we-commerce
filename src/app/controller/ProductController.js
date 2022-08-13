@@ -26,7 +26,7 @@ module.exports = {
   },
 
   // create new product
-  async create(req, res) {
+  async store(req, res) {
     const { name, category_id, description, image, price } = req.body;
 
     // validating fields
