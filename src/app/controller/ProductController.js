@@ -3,7 +3,13 @@ const Product = require("@model/Product");
 module.exports = {
   // show all products
   async index(req, res) {
-    const products = await Product.findAll();
+    const products = await Product.findAll({
+      attributes: ["id", "name", "description", "image"],
+      include: {
+        association: "category",
+        attributes: ["id", "name"],
+      },
+    });
 
     if (products.length < 1) {
       return res.status(400).json({ message: "No products found" });

@@ -2,7 +2,19 @@ const Category = require("@model/Category");
 
 module.exports = {
   async index(req, res) {
-    const categories = await Category.findAll();
+    const categories = await Category.findAll({
+      include: {
+        association: "products",
+        attributes: [
+          "id",
+          "name",
+          "description",
+          "image",
+          "Price",
+          "category_id",
+        ],
+      },
+    });
 
     if (categories.length <= 0) {
       return res.status(400).json({ error: "No categories found" });
