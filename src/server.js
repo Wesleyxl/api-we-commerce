@@ -2,6 +2,7 @@ require("dotenv").config({ path: ".env" });
 require("module-alias/register");
 
 const express = require("express");
+const cors = require("cors");
 
 // init app
 const app = express();
@@ -12,6 +13,7 @@ const appConfig = require("@config/app");
 const routes = require("./routes");
 
 // start routes
+app.use(cors());
 app.use(express.json());
 app.use(routes);
 
